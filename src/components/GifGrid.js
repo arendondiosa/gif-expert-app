@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { CardColumns } from "react-bootstrap";
-import { getGifs } from "../helpers/getGifs";
+import { CardColumns, Spinner } from "react-bootstrap";
 
 import { GifGridItem } from "./GifGridItem";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 
 export const GifGrid = ({ category }) => {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    getGifs(category).then(setImages);
-  }, [category]);
+  const { data, loading } = useFetchGifs(category);
 
   return (
     <div>
       <h3>{category}</h3>
+
+      {loading && (
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      )}
+
       <CardColumns>
-        {images.map((img) => (
+        {data.map((img) => (
           <GifGridItem key={img.id} {...img} />
         ))}
       </CardColumns>
