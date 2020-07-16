@@ -40,3 +40,35 @@ jobs:
       - name: Run JS lint
         run: |
           npm run lint
+  test-js:
+    name: JS Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.3.0"
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install node dependencies
+        run: |
+          npm install .
+      - name: Show node environment
+        run: |
+          node --version
+          npm --version
+      - name: Run JS Tests
+        run: |
+          cd src/tests
+          npm run test
