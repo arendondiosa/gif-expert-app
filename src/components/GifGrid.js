@@ -10,7 +10,7 @@ export const GifGrid = ({ category }) => {
 
   return (
     <div>
-      <h3>{category}</h3>
+      <h3 className="animate__animated animate__fadeIn">{category}</h3>
 
       {loading && (
         <Spinner animation="border" role="status">

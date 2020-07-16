@@ -4,18 +4,13 @@ import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Simpsons"]);
+  const [categories, setCategories] = useState([]);
 
   return (
     <Container>
       <Navbar fixed="top" bg="dark" variant="dark">
         <Navbar.Brand href="#home">GifExpertApp</Navbar.Brand>
         <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
-        </Navbar.Collapse>
       </Navbar>
       <div className="content">
         <Jumbotron>
