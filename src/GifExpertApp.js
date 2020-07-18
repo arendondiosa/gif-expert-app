@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Container, Jumbotron, Navbar } from "react-bootstrap";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
-export const GifExpertApp = () => {
-  const [categories, setCategories] = useState([]);
+export const GifExpertApp = ({ defaultCategories }) => {
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <Container>
@@ -26,4 +27,12 @@ export const GifExpertApp = () => {
       </div>
     </Container>
   );
+};
+
+GifExpertApp.propTypes = {
+  defaultCategories: PropTypes.array,
+};
+
+GifExpertApp.defaultProps = {
+  defaultCategories: [],
 };

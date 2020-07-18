@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests <GifExpertApp /> Render the component 1`] = `
+<Container
+  fluid={false}
+>
+  <Navbar
+    bg="dark"
+    collapseOnSelect={false}
+    expand={true}
+    fixed="top"
+    variant="dark"
+  >
+    <NavbarBrand
+      href="#home"
+    >
+      GifExpertApp
+    </NavbarBrand>
+    <NavbarToggle
+      label="Toggle navigation"
+    />
+  </Navbar>
+  <div
+    className="content"
+  >
+    <Jumbotron
+      fluid={false}
+    >
+      <h1>
+        GifExpertApp
+      </h1>
+      <p>
+        Search all the GIFs and Stickers. 
+        <code>
+          Powered by GIPHY
+        </code>
+      </p>
+      <AddCategory
+        setCategories={[Function]}
+      />
+    </Jumbotron>
+  </div>
+</Container>
+`;
+
+exports[`Tests <GifExpertApp /> Should display a list of categories 1`] = `
+<Container
+  fluid={false}
+>
+  <Navbar
+    bg="dark"
+    collapseOnSelect={false}
+    expand={true}
+    fixed="top"
+    variant="dark"
+  >
+    <NavbarBrand
+      href="#home"
+    >
+      GifExpertApp
+    </NavbarBrand>
+    <NavbarToggle
+      label="Toggle navigation"
+    />
+  </Navbar>
+  <div
+    className="content"
+  >
+    <Jumbotron
+      fluid={false}
+    >
+      <h1>
+        GifExpertApp
+      </h1>
+      <p>
+        Search all the GIFs and Stickers. 
+        <code>
+          Powered by GIPHY
+        </code>
+      </p>
+      <AddCategory
+        setCategories={[Function]}
+      />
+    </Jumbotron>
+    <GifGrid
+      category="Simpsons"
+      key="Simpsons"
+    />
+    <GifGrid
+      category="Batman"
+      key="Batman"
+    />
+    <GifGrid
+      category="Superman"
+      key="Superman"
+    />
+  </div>
+</Container>
+`;

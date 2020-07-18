@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests <AddCategory /> Render the component 1`] = `
+<div>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    Sipmsons
+  </h3>
+  <Spinner
+    animation="border"
+    role="status"
+  >
+    <span
+      className="sr-only"
+    >
+      Loading...
+    </span>
+  </Spinner>
+  <CardColumns />
+</div>
+`;
