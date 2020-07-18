@@ -28,6 +28,7 @@
     "animate.css": "^4.1.0",
     "bootstrap": "^4.5.0",
     "enzyme-to-json": "^3.5.0",
+    "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",

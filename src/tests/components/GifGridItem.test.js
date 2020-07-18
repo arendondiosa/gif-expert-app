@@ -3,8 +3,12 @@ import { shallow } from "enzyme";
 import { GifGridItem } from "../../components/GifGridItem";
 
 describe("Tests <GifGridItem />", () => {
+  const title = "This is a title";
+  const url = "http://url.com";
+
+  const wrapper = shallow(<GifGridItem title={title} url={url} />);
+
   test("Render the component", () => {
-    const wrapper = shallow(<GifGridItem title="" url="" />);
     expect(wrapper).toMatchSnapshot();
   });
 });
